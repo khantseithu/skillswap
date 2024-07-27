@@ -4,13 +4,11 @@ import { getThemeToggler } from "./lib/get-theme-button";
 import { auth, signIn, signOut } from "./server/auth";
 import { db } from "./server/db";
 import { users } from "./server/db/schema";
-import SignIn from "./auth-ui/auth-buttons";
-import { signOutAction } from "./actions";
 
 export const runtime = "edge";
 
 export default async function Page() {
-  const session = await auth();
+  const usr = await auth();
 
   const userCount = await db
     .select({
@@ -27,18 +25,30 @@ export default async function Page() {
       </div>
 
       <div className="max-w-2xl text-start w-full mt-16">
-        {session?.user?.email ? (
+        {usr?.user?.email ? (
           <>
             <div className="mt-4 flex flex-col gap-2">
-              <span>Hello {session.user.name} 👋</span>
-              <span>{session.user.email}</span>
+              <span>Hello {usr.user.name} 👋</span>
+              <span>{usr.user.email}</span>
             </div>
-            <form action={signOutAction}>
+            <form
+              action={async () => {
+                "use server";
+                await signOut();
+              }}
+            >
               <Button className="mt-4">Sign out</Button>
             </form>
           </>
         ) : (
-          <SignIn />
+          <form
+            action={async () => {
+              "use server";
+              await signIn("google");
+            }}
+          >
+            <Button className="mt-4">Login with Google</Button>
+          </form>
         )}
       </div>
     </main>
