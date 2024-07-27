@@ -44,7 +44,9 @@ export default async function Page() {
           <form
             action={async () => {
               "use server";
-              await signIn("google");
+              await signIn("google", {
+                redirectTo: "/dashboard",
+              });
             }}
           >
             <Button className="mt-4">Login with Google</Button>
