@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   title: "Skill Swap",
   description: "A peer-to-peer skill-sharing and micro-learning platform.",
 };
