@@ -73,7 +73,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                   <UserIcon />
                   <DropdownLabel>My profile</DropdownLabel>
                 </DropdownItem>
-                <DropdownItem href="/settings">
+                <DropdownItem href="/dashboard/settings">
                   <Cog8ToothIcon />
                   <DropdownLabel>Settings</DropdownLabel>
                 </DropdownItem>
@@ -162,7 +162,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                 <MegaphoneIcon />
                 <SidebarLabel>Lessons</SidebarLabel>
               </SidebarItem>
-              <SidebarItem href="/settings">
+              <SidebarItem href="/dashboard/settings">
                 <Cog6ToothIcon />
                 <SidebarLabel>Settings</SidebarLabel>
               </SidebarItem>
@@ -215,7 +215,7 @@ export default function Layout({ children }: { children: ReactNode }) {
                   <UserIcon />
                   <DropdownLabel>My profile</DropdownLabel>
                 </DropdownItem>
-                <DropdownItem href="/settings">
+                <DropdownItem href="/dashboard/settings">
                   <Cog8ToothIcon />
                   <DropdownLabel>Settings</DropdownLabel>
                 </DropdownItem>
