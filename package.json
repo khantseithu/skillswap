@@ -21,6 +21,7 @@
     "@repo/shared-types": "*",
     "@repo/tailwind-config": "*",
     "@repo/typescript-config": "*",
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
     "@types/readline-sync": "^1.4.8",
     "autoprefixer": "^10.4.19",
