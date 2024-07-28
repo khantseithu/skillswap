@@ -176,7 +176,11 @@ export default function Layout({ children }: { children: ReactNode }) {
               <SidebarItem href="/events/3">Six Fingers — DJ Set</SidebarItem>
               <SidebarItem href="/events/4">We All Look The Same</SidebarItem> */}
             </SidebarSection>
+
             <SidebarSpacer />
+            <SidebarItem>
+              <SetThemeButton />
+            </SidebarItem>
             <SidebarSection>
               <SidebarItem href="/support">
                 <QuestionMarkCircleIcon />
@@ -189,7 +193,6 @@ export default function Layout({ children }: { children: ReactNode }) {
             </SidebarSection>
           </SidebarBody>
           <SidebarFooter className="max-lg:hidden">
-            <SetThemeButton />
             <Dropdown>
               <DropdownButton as={SidebarItem}>
                 <span className="flex min-w-0 items-center gap-3">
