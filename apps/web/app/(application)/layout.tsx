@@ -47,8 +47,11 @@ import {
   TicketIcon,
 } from "@heroicons/react/20/solid";
 import { ReactNode } from "react";
+import { getThemeToggler } from "../lib/get-theme-button";
 
 export default function Layout({ children }: { children: ReactNode }) {
+  const SetThemeButton = getThemeToggler();
+
   return (
     <SidebarLayout
       navbar={
@@ -186,6 +189,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </SidebarSection>
           </SidebarBody>
           <SidebarFooter className="max-lg:hidden">
+            <SetThemeButton />
             <Dropdown>
               <DropdownButton as={SidebarItem}>
                 <span className="flex min-w-0 items-center gap-3">
