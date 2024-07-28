@@ -9,6 +9,9 @@
     "cf-typegen": "wrangler types --env-interface CloudflareEnv env.d.ts",
     "pages:build": "bunx @cloudflare/next-on-pages",
     "preview": "bun pages:build && wrangler pages dev",
-    "deploy": "bun pages:build && wrangler pages deploy"
+    "deploy": "bun pages:build && wrangler pages deploy",
+    "schema-update": "drizzle-kit generate sqlite",
+    "update-db": "wrangler d1 execute skillswap-db --remote",
+    "update-prod-db": "wrangler d1 execute skillswap-db --remote"
   }
 }
