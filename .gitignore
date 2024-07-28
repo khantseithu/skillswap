@@ -4,6 +4,10 @@ bun.lockb
 .*.vars
 .wrangler
 
+# service worker
+apps/web/public/sw*
+apps/web/public/swe-worker*
+
 # Dependencies
 node_modules
 .pnp
