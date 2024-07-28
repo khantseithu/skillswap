@@ -1,4 +1,6 @@
 import { Button } from "@repo/ui/src/button";
+import { Label } from "@repo/ui/src/label";
+import { Input } from "@repo/ui/src/input";
 
 export default function Page() {
   return (
@@ -35,101 +37,31 @@ export default function Page() {
             </div>
 
             <div className="sm:col-span-3">
-              <label
-                htmlFor="first-name"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                First name
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="first-name"
-                  id="first-name"
-                  autoComplete="given-name"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                />
-              </div>
+              <Label htmlFor="last-name">Last Name</Label>
+              <Input type="last-name" id="last-name" placeholder="Doe" />
             </div>
 
             <div className="sm:col-span-3">
-              <label
-                htmlFor="last-name"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Last name
-              </label>
-              <div className="mt-2">
-                <input
-                  type="text"
-                  name="last-name"
-                  id="last-name"
-                  autoComplete="family-name"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                />
-              </div>
+              <Label htmlFor="first-name">First Name</Label>
+              <Input type="first-name" id="first-name" placeholder="John" />
             </div>
 
             <div className="col-span-full">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Email address
-              </label>
-              <div className="mt-2">
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
-                />
-              </div>
+              <Label htmlFor="email">Email</Label>
+              <Input
+                type="email"
+                id="email"
+                placeholder="johndoe@skillswap.org"
+              />
             </div>
 
             <div className="col-span-full">
-              <label
-                htmlFor="username"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Username
-              </label>
-              <div className="mt-2">
-                <div className="flex rounded-md bg-white/5 ring-1 ring-inset ring-white/10 focus-within:ring-2 focus-within:ring-inset focus-within:ring-primary">
-                  <span className="flex select-none items-center pl-3 text-gray-400 sm:text-sm">
-                    example.com/
-                  </span>
-                  <input
-                    type="text"
-                    name="username"
-                    id="username"
-                    autoComplete="username"
-                    className="flex-1 border-0 bg-transparent py-1.5 pl-1 text-white focus:ring-0 sm:text-sm sm:leading-6"
-                    placeholder="janesmith"
-                  />
-                </div>
-              </div>
-            </div>
-
-            <div className="col-span-full">
-              <label
-                htmlFor="timezone"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Timezone
-              </label>
-              <div className="mt-2">
-                <select
-                  id="timezone"
-                  name="timezone"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 [&_*]:text-black"
-                >
-                  <option>Pacific Standard Time</option>
-                  <option>Eastern Standard Time</option>
-                  <option>Greenwich Mean Time</option>
-                </select>
-              </div>
+              <Label htmlFor="bio">Bio</Label>
+              <Input
+                type="bio"
+                id="bio"
+                placeholder="I'm a software engineer."
+              />
             </div>
           </div>
 
@@ -141,7 +73,7 @@ export default function Page() {
 
       <div className="grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <h2 className="text-base font-semibold leading-7 text-white">
+          <h2 className="text-base font-semibold leading-7 text-primary dark:text-white">
             Change password
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-400">
@@ -152,55 +84,34 @@ export default function Page() {
         <form className="md:col-span-2">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:max-w-xl sm:grid-cols-6">
             <div className="col-span-full">
-              <label
-                htmlFor="current-password"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Current password
-              </label>
+              <Label htmlFor="current-password">Current password</Label>
               <div className="mt-2">
-                <input
+                <Input
+                  type="password"
                   id="current-password"
-                  name="current_password"
-                  type="password"
                   autoComplete="current-password"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div className="col-span-full">
-              <label
-                htmlFor="new-password"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                New password
-              </label>
+              <Label htmlFor="new-password">New password</Label>
               <div className="mt-2">
-                <input
+                <Input
+                  type="password"
                   id="new-password"
-                  name="new_password"
-                  type="password"
                   autoComplete="new-password"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
 
             <div className="col-span-full">
-              <label
-                htmlFor="confirm-password"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Confirm password
-              </label>
+              <Label htmlFor="confirm-password">Confirm password</Label>
               <div className="mt-2">
-                <input
-                  id="confirm-password"
-                  name="confirm_password"
+                <Input
                   type="password"
+                  id="confirm-password"
                   autoComplete="new-password"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -214,7 +125,7 @@ export default function Page() {
 
       <div className="grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <h2 className="text-base font-semibold leading-7 text-white">
+          <h2 className="text-base font-semibold leading-7 text-primary dark:text-white">
             Log out other sessions
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-400">
@@ -226,19 +137,12 @@ export default function Page() {
         <form className="md:col-span-2">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 sm:max-w-xl sm:grid-cols-6">
             <div className="col-span-full">
-              <label
-                htmlFor="logout-password"
-                className="block text-sm font-medium leading-6 text-white"
-              >
-                Your password
-              </label>
+              <Label htmlFor="logout-password">Your Password</Label>
               <div className="mt-2">
-                <input
-                  id="logout-password"
-                  name="password"
+                <Input
                   type="password"
+                  id="logout-password"
                   autoComplete="current-password"
-                  className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
                 />
               </div>
             </div>
@@ -252,7 +156,7 @@ export default function Page() {
 
       <div className="grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
         <div>
-          <h2 className="text-base font-semibold leading-7 text-white">
+          <h2 className="text-base font-semibold leading-7 text-primary dark:text-white">
             Delete account
           </h2>
           <p className="mt-1 text-sm leading-6 text-gray-400">
