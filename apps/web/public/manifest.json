@@ -25,6 +25,23 @@
       "type": "image/png"
     }
   ],
+  "screenshots": [
+    {
+      "src": "./screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "./screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    },
+    {
+      "src": "./screenshot.png",
+      "sizes": "390x844",
+      "type": "image/png"
+    }
+  ],
   "theme_color": "#FFFFFF",
   "background_color": "#FFFFFF",
   "start_url": "/",
